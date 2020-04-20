@@ -1,3 +1,5 @@
+require 'coveralls'
+Coveralls.wear!
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
@@ -5,8 +7,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 
-require 'coveralls'
-coveralls.wear_merged!('rails')
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
@@ -22,7 +23,7 @@ RSpec.configure do |config|
 end
 
 Shoulda::Matchers.configure do |config|
-  config.intergrate do |with|
+  config.integrate do |with|
     with.test_framework :rspec
     with.library :rails
   end
