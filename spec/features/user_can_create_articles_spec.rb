@@ -11,9 +11,9 @@ context "Successfully create an article 'Happy path'" do
     click_on "Save Article"
   end
   
-  # it 'User should see success message' do
-  #   expect(page).to have_content 'Article was successfully created'
-  # end
+  it 'User should see success message' do
+    expect(page).to have_content 'Article was successfully created'
+  end
 
   it 'User should be on article show page' do
     article = Article.find_by(title: 'Happy holidays')
