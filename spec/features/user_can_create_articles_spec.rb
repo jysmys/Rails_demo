@@ -33,7 +33,7 @@ end
 context "User doesn't enter a title for the article [Sad Path]" do
   before do
     fill_in "article[content]", with: "Buy your gifts now!"
-    click_on "Create Article"
+    click_on "Save Article"
   end
 
   it 'User should see error message' do
