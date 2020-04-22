@@ -17,22 +17,20 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    # if article_params[:title].nil?
+    #   @article = false
+    # end
     if @article.save
-      redirect_to @article
-      'Article was successfully created'
+      redirect_to @article, flash: {notice: "Article was successfully created"}
     else
-      render 'new', notice: 'Something went wrong'
+      flash[:notice] = "Something went wrong"
+      render 'new'
     end
   end
 
   def update
     @article = Article.find(params[:id])
-   
-    if @article.update(article_params)
-      redirect_to @article
-    else
-      render 'edit'
-    end
+    @article.update(article_params) ? (redirect_to @article) : (render 'edit')
   end
 
 

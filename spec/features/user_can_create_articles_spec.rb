@@ -11,9 +11,9 @@ context "Successfully create an article 'Happy path'" do
     click_on "Save Article"
   end
   
-  # it 'User should see success message' do
-  #   expect(page).to have_content 'Article was successfully created'
-  # end
+  it 'User should see success message' do
+    expect(page).to have_content 'Article was successfully created'
+  end
 
   it 'User should be on article show page' do
     article = Article.find_by(title: 'Happy holidays')
@@ -33,7 +33,7 @@ end
 context "User doesn't enter a title for the article [Sad Path]" do
   before do
     fill_in "article[content]", with: "Buy your gifts now!"
-    click_on "Create Article"
+    click_on "Save Article"
   end
 
   it 'User should see error message' do
