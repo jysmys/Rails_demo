@@ -1,5 +1,9 @@
-<p class="alert"><%= notice %></p>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Text: </strong><%= @article.content %></p>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div id="articles">
+  <p class="alert"><%= notice %></p>
+  <div class="show">
+    <h5>Title: </h5><h6><%= @article.title %></h6>
+    <h5>Text: </h5><h6><%= @article.content %></h6>
+    <p><%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %></p>
+  </div>
+</div>
