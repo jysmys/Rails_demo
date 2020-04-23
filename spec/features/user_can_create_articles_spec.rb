@@ -1,7 +1,7 @@
 feature 'User can create articles' do
 before do
   visit root_path
-  click_on "New article"
+  click_on "Add new blog"
 end
 
 context "Successfully create an article 'Happy path'" do
