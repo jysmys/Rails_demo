@@ -3,10 +3,10 @@
   <div class="show">
     <h5>Title: </h5><h6><%= @article.title %></h6>
     <h5>Text: </h5><h6><%= @article.content %></h6>
-    <h2>Comments</h2>
+    <h5>Comments:</h5>
 <% @article.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
+    <%# <strong>Commenter:</strong> %>
     <%= comment.commenter %>
   </p>
  
@@ -16,7 +16,7 @@
   </p>
 <% end %>
  
-    <h5>Add a comment:</h5>
+    <h6>Add a comment</h6>
 <div><%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
     <%= form.label Comment %><br>
