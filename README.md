@@ -1,24 +1,24 @@
-# README
+# Blog / article by Jenny
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blogg site where you can create new bloggs and edit or destroy them. Also its possible to add comments to the posts.
 
-Things you may want to cover:
+### Ruby version ruby 2.5.1p57
 
-* Ruby version
+### System dependencies
 
-* System dependencies
+Bundler 2.1.2
+Rails 6.0.2
+postgres DB
 
-* Configuration
+### test suite
 
-* Database creation
+rspec
+Semaphore
 
-* Database initialization
+### Deployment
 
-* How to run the test suite
+### Updates / improvment plans
 
-* Services (job queues, cache servers, search engines, etc.)
+Be able to delete comments
 
-* Deployment instructions
-
-* ...
+### Licensed under MIT license
