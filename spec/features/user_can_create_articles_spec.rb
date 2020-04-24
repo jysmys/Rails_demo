@@ -42,6 +42,4 @@ context "User doesn't enter a title for the article [Sad Path]" do
 
 end
 
-# Add SAD path
-
 end

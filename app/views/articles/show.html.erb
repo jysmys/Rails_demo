@@ -5,11 +5,7 @@
     <h5>Text: </h5><h6><%= @article.content %></h6>
     <h5>Comments:</h5>
 <% @article.comments.each do |comment| %>
-  <p>
-    <%# <strong>Commenter:</strong> %>
-    <%= comment.commenter %>
-  </p>
- 
+  <p>Commenter: <%= comment.commenter %></p>
   <p>
     <strong>Comment:</strong>
     <%= comment.body %>
