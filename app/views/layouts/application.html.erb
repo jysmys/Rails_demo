@@ -10,6 +10,12 @@
   </head>
 <header><h1>La familya BLOGG</h1></header>
   <body>
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
   <% if flash[:notice] %>
     <% flash[:notice] %>
   <%end%>
