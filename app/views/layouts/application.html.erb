@@ -4,33 +4,21 @@
     <title>Scherr Blogging</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 <header><h1>La familya BLOGG</h1></header>
   <body>
-  <div class="ui tiny menu">
-  <a class="active item">
-    Home
-  </a>
-  <div class="right menu">
-    <div class="ui dropdown item">
-      Language <i class="dropdown icon"></i>
-      <div class="menu">
-        <a class="item">Login</a>
-        <a class="item">Sign Up</a>
-        
-      </div>
-    </div>
-  </div>
-</div>
+
+  <%= render 'layouts/nav' %>
   <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
   <% if flash[:notice] %>
     <% flash[:notice] %>
   <%end%>
