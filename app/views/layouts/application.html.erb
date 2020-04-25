@@ -9,19 +9,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
-<header><h1>La familya BLOGG</h1></header>
+  <header>
+    <h1>La familia BLOGG</h1>
+  </header>
   <body>
 
-  <%= render 'layouts/nav' %>
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-  <% if flash[:notice] %>
-    <% flash[:notice] %>
-  <%end%>
-    <%= yield %>
-  </body>
-</html>
+    <%= render 'layouts/nav' %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <% if flash[:notice] %>
+      <% flash[:notice] %><%end%>
+      <%= yield %>
+    </body>
+  </html>

@@ -1,19 +1,20 @@
-
-<%# <h1>Blog content</h1> %>
-
 <div id="articles">
   <h5>BLOG posts</h5>
-<div class=list>
-  
-  <% @articles.each do |article| %>
-      <div class="title"><h6><%= link_to article.title, article_path(article) %></h6></div>
-      <div class="editing"><p><%= link_to 'Edit', edit_article_path(article) %> | 
-      <%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></div>
-  <% end %>
-</div>
-<div id="newblog">
-<h6><%= link_to 'Add new blog', new_article_path %></h6>
-</div>
-</div>
+  <div class="list">
+
+    <% @articles.each do |article| %>
+      <div class="title">
+        <h6><%= link_to article.title, article_path(article) %></h6>
+      </div>
+      <div class="editing">
+        <p><%= link_to 'Edit', edit_article_path(article) %>
+          |
+          <%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
+    </div>
+    <div id="newblog">
+      <% if user_signed_in? %>
+        <h6><%= link_to 'Add new blog', new_article_path %></h6>
+      <% end %>
+    </div>
+  </div>
