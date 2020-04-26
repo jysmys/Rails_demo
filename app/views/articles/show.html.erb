@@ -10,12 +10,12 @@
     <h6><%= @article.content %></h6><br/>
     <h5>Comments:</h5>
     <% @article.comments.each do |comment| %>
-      <p>Commenter:
-        <%= comment.commenter %></p>
-      <p>
+      <h6>From:
+        <%= comment.commenter %></h6>
+      <h6>
         <strong>Comment:</strong>
         <%= comment.body %>
-      </p>
+      </h6>
     <% end %>
 
     <br/>
