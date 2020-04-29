@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :comment do
-    commenter { "MyString" }
-    body { "MyText" }
+    commenter { "NoBody Special" }
+    body { "Why are you writing this" }
     article { nil }
   end
 end

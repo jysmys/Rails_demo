@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
 @import url("https://fonts.googleapis.com/css2?family=Girassol&family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 
@@ -20,7 +23,7 @@ h1 {
   font-size: 60px;
 }
 h5 {
-  color: black;
+  color: rgb(110, 109, 109);
   font-family: "Rajdhani", sans-serif;
   text-align: center;
   letter-spacing: 0.15em;
@@ -34,12 +37,28 @@ h6 {
   letter-spacing: 0.1em;
   font-size: 20px;
 }
+label {
+  color: black;
+  font-family: "Rajdhani", sans-serif;
+  text-align: left;
+  font-size: 17px;
+  text-align: center;
+}
 p {
   color: black;
   font-family: "Rajdhani", sans-serif;
   text-align: left;
   font-size: 15px;
   text-align: center;
+}
+.alert-success {
+  color: rgb(0, 0, 0);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  border-color: rgb(85, 85, 85);
+  background-image: linear-gradient(to bottom, #c7c7c7 0%, #868686 100%);
 }
 a:link {
   color: black;
@@ -62,7 +81,9 @@ a#newblog:visited {
   text-decoration: none;
 }
 
-#articles {
+#articles,
+.loginForm,
+.links_ {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -79,9 +100,12 @@ input {
   width: 500px;
   font-size: 17px;
 }
-form {
+form,
+.loginForm,
+.links_ {
   font-family: "Lato", sans-serif;
   font-size: 22px;
+  font-weight: 200;
 }
 input[type="text"] {
   margin: 8px 0;
@@ -97,10 +121,22 @@ textarea {
   width: 500px;
   font-size: 15px;
 }
-input[type="submit"] {
-  height: 20px;
+input[type="submit"],
+.actions {
+  height: 30px;
   width: 500px;
   font-size: 17px;
   font-family: "Lato", sans-serif;
   font-weight: bolder;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.signin_header{
+  padding-bottom: 30px;
+}
+#user_remember_me {
+  width: 30px;
+}
+.links_ {
+  padding-top: 20px;
 }
