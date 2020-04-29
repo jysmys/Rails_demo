@@ -1,9 +1,8 @@
 feature 'user can sign up' do
-  let(:user) {create(:user, email: "gittan@gmail.com")}
+  let(:user) { create(:user, email: "gittan@gmail.com") }
     before do
     visit root_path
   end
-  
   
   context 'successfully created a new account' do
     before do
